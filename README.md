@@ -1,104 +1,74 @@
-# DSA210 Istanbul Mobility Project
-**Analyzing the Impact of Weather and Special Days on Istanbul Public Transport**  
-_Fall 2025 • DSA210 Term Project_
+# DSA210 – Istanbul Mobility Project  
+**Analyzing the Impact of Weather and Special Days on Istanbul Public Transport | DSA210 Fall 2025 Project**
 
 ---
 
-## Project Summary
-This project explores how **weather conditions** and **special days** (such as national holidays, exam periods, or major events) influence **public transport usage in Istanbul**.  
-By combining and analyzing open data from multiple sources, the project aims to uncover meaningful patterns in passenger volume fluctuations and provide insights that can help **municipalities and urban planners** make better data-driven decisions.
+## PROJECT SUMMARY
+This project aims to search effects of special days and weather conditions to the public transportation.  
+Main idea is to compare and merge daily passanger interference with daily weather conditions and special days and get meaningful pattern.
 
 ---
 
-## Motivation
-Every day, millions of Istanbul residents commute using public transport.  
-However, usage patterns fluctuate dramatically—sometimes due to **rainy weather**, **extreme temperatures**, or **special holidays**.  
-This project aims to **quantify and visualize** these dynamics to better understand:
-
-- How daily ridership changes with weather conditions  
-- The influence of holidays and weekends on passenger flow  
-- Which lines or time periods experience the biggest variations  
-
-By revealing these relationships, the project contributes to smarter and more responsive **urban mobility planning**.
+## MOTIVATION
+Every day millions of people goes school, work or elsewhere by public transportation.  
+But sometimes public transportation have huge human traffic, sometimes it changes to opposite way.  
+Rainy weather, special holidays and weekends effect this situation more deeply.  
+This project aims to understand dinamics of these type of changes.  
+My aim is to provide effects of weather and special days to the public transportation with datas that I merged.  
+In this way, I want to contribute to municipalities and transportation planners being able to anticipate such changes and make more efficient plans in the future.
 
 ---
 
-## Data Sources
-All datasets are **publicly available**:
+## DATA SOURCES
+The data I will use in this project will be publicly available.  
+Data sources that I am gonna use:
 
-| Source | Description | URL |
-|--------|--------------|-----|
-| **İBB Open Data Portal** | Daily passenger traffic and transportation metrics | [data.ibb.gov.tr/dataset/istanbul-trafik-indeksi](https://data.ibb.gov.tr/dataset/istanbul-trafik-indeksi) |
-| **Meteoroloji Genel Müdürlüğü (MGM)** | Daily weather data: temperature, precipitation, and wind | [mgm.gov.tr/tahmin/il-ve-ilceler.aspx?il=İstanbul](https://www.mgm.gov.tr/tahmin/il-ve-ilceler.aspx?il=İstanbul) |
-| **Public Holidays & Special Days Calendar** | National holidays, school start days, exam dates, and special events | Custom dataset (manually created) |
+1. **İBB Open Data Portal** – [Daily human traffic through public transportation](https://data.ibb.gov.tr/dataset/istanbul-trafik-indeksi)  
+2. **Meteoroloji Genel Müdürlüğü (MGM)** – [Daily temperature, rain or wind information data for Istanbul](https://www.mgm.gov.tr/tahmin/il-ve-ilceler.aspx?il=İstanbul)  
+3. **Public Holidays and Special Days Calendar** – National holidays, exam days, start of school like special days.
 
----
-
-## Data Gathering and Preparation Plan
-**Step 1:** Download daily public transportation data from İBB Open Data Portal  
-**Step 2:** Collect Istanbul’s daily weather data from MGM  
-**Step 3:** Create a custom calendar dataset of holidays and special events  
-**Step 4:** Merge all data chronologically into a single timeline dataset  
-**Step 5:** Clean missing or erroneous data and extract weekly/seasonal patterns  
-
-**Final Dataset Columns:**
-| Date | Passenger_Count | Temperature | Rain | Wind | Is_Holiday | Event_Type |
-|------|------------------|--------------|------|------|-------------|-------------|
+I am aiming to analyze these sources and merge collected data with timeline.
 
 ---
 
-## Planned Analysis Steps
-1. **Trend and Seasonality Analysis**  
-   - Examine long-term changes and weekly/seasonal fluctuations in ridership.
-2. **Weather Correlation Analysis**  
-   - Identify relationships between weather variables (rainfall, temperature) and passenger counts.  
-   - Hypothesis example: _“Passenger numbers decrease on rainy days.”_
-3. **Special Day Effect**  
-   - Compare weekday/weekend and holiday passenger levels.  
-   - Analyze changes during major events (e.g., match days, national holidays).
-4. **Visualization**  
-   - Use Python (Pandas, Matplotlib, Seaborn) to create time series plots, heatmaps, and correlation charts.
+## DATA GATHERING AND PREPARATION PLAN
+**Step 1:** From İBB open data portal I will download daily usage data of public transportation in Istanbul.  
+**Step 2:** From MGM site I will gather Istanbul’s daily weather data.  
+**Step 3:** I will create calendar file which includes national holidays and special days.  
+**Step 4:** Combining all this data on a historical basis and making it analyzable.  
+**Step 5:** Cleaning up missing or erroneous records and extracting weekly and seasonal characteristics.  
+
+At the end of these steps we have a dataset that includes:  
+Every day passenger number + weather condition + holiday information.
 
 ---
 
-## Expected Findings
-- Decrease in passengers during **rainy or extremely hot days**  
-- Significant drop in ridership on **holidays and Sundays**  
-- Increase in ridership near **event venues** during special occasions  
-- Station-based variability linked to geographic or demographic factors
+## PLANNED ANALYZE STEPS
+1. Seeing the change in daily passenger numbers over time (trend and seasonality analysis)  
+2. Examine the relationship between weather and passenger numbers (For example: is there a drop in passenger numbers on rainy days?)  
+3. To test whether there are station-based differences on public holidays and weekends  
+4. Visualizing the findings with graphics.
 
 ---
 
-## Limitations and Future Steps
-- Currently at **data planning stage** — data collection begins **November 2025**  
-- Possible limitations:  
-  - Incomplete or inconsistent station-level data  
-  - Missing weather records for specific dates  
-  - Time constraints for comprehensive model testing  
-
-**Next Steps:**
-- Begin data merging and cleaning  
-- Perform exploratory data analysis (EDA)  
-- Share reproducible code and visualizations on GitHub  
+## EXPECTED FINDINGS
+I expect a decrease in passenger numbers on rainy days;  
+a decrease at certain times on very hot days;  
+a significant decrease on holidays or Sundays;  
+and an increase on certain routes during special events (For example: match days).
 
 ---
 
-## Final Note
-This project takes a **relationship-based and visualization-oriented** approach rather than complex modeling.  
-The goal is to provide **clear, interpretable insights** into Istanbul’s transportation dynamics.  
-All scripts, datasets, and figures will be shared transparently on this repository.
+## LIMITATIONS AND FUTURE STEPS
+I do not currently have actual data.  
+I have only completed the data sources and planning phase at this stage.  
+I will begin data downloading, cleaning, and initial analysis in November.  
+
+Time constraints, missing station data, or gaps in weather data may limit the accuracy of the analysis.
 
 ---
 
-## Tools and Libraries
-- **Python** → `Pandas`, `NumPy`, `Matplotlib`, `Seaborn`
-- **Jupyter Notebook**
-- **GitHub** for version control and public sharing
-
----
-
-### Author
-**Efe Furkan Ekmekci**  
-_DS210: Data Science Applications • Fall 2025_
-
-[View Source Code on GitHub](#)
+## FINAL NOTE
+This project aims to offer a simple but effective data approach to understanding daily transportation habits in Istanbul.  
+Instead of complex modeling, a relationship-based perspective based on explanation and visualization will be done.  
+The code and outputs obtained throughout the process will be shared transparently on GitHub.
